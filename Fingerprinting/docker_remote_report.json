@@ -1,0 +1,33 @@
+{
+  "agent_metadata": {
+    "timestamp": "2026-01-15T17:33:54Z",
+    "scan_type": "remote",
+    "target_host": "localhost"
+  },
+  "system_info": {
+    "os": "Linux",
+    "version": "Ubuntu 22.04.5 LTS",
+    "kernel": "6.12.54-linuxkit",
+    "cpu": "unknown",
+    "cpu_architecture": "aarch64",
+    "evidence": {
+      "version": {
+        "command_run": "ssh -p 2222 ubuntu@localhost cat /etc/os-release 2>/dev/null | grep '^PRETTY_NAME=' | cut -d= -f2- | tr -d '\"'",
+        "raw_output": "Ubuntu 22.04.5 LTS"
+      },
+      "kernel": {
+        "command_run": "ssh -p 2222 ubuntu@localhost uname -r",
+        "raw_output": "6.12.54-linuxkit"
+      },
+      "cpu_architecture": {
+        "command_run": "ssh -p 2222 ubuntu@localhost uname -m",
+        "raw_output": "aarch64"
+      },
+      "cpu_model": {
+        "command_run": "ssh -p 2222 ubuntu@localhost cat /proc/cpuinfo 2>/dev/null | grep -m1 'model name' | cut -d: -f2- | sed 's/^ *//'",
+        "raw_output": ""
+      }
+    }
+  },
+  "software_inventory": []
+}

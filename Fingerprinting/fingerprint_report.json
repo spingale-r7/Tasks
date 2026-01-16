@@ -1,0 +1,99 @@
+{
+  "agent_metadata": {
+    "timestamp": "2026-01-16T04:52:06Z",
+    "scan_type": "local",
+    "target_host": "localhost"
+  },
+  "system_info": {
+    "os": "macOS",
+    "version": "15.7.3",
+    "kernel": "24.6.0",
+    "cpu": "Apple M4 Pro",
+    "cpu_architecture": "arm64",
+    "evidence": {
+      "version": {
+        "command_run": "sw_vers -productVersion",
+        "raw_output": "15.7.3"
+      },
+      "kernel": {
+        "command_run": "uname -r",
+        "raw_output": "24.6.0"
+      },
+      "cpu_architecture": {
+        "command_run": "uname -m",
+        "raw_output": "arm64"
+      },
+      "cpu_model": {
+        "command_run": "sysctl -n machdep.cpu.brand_string 2>/dev/null || sysctl -n hw.model",
+        "raw_output": "Apple M4 Pro"
+      }
+    }
+  },
+  "software_inventory": [
+    {
+      "productName": "Visual Studio Code",
+      "versionNumber": "1.108.0",
+      "architecture": "arm64",
+      "productFamily": "IDE",
+      "vendor": "Microsoft",
+      "evidence": {
+        "command_run": "mdfind \"kMDItemCFBundleIdentifier == 'com.microsoft.VSCode'\" | head -n 1",
+        "raw_output": "/Applications/Visual Studio Code.app",
+        "version_command_run": "/usr/libexec/PlistBuddy -c \"Print :CFBundleShortVersionString\" \"/Applications/Visual Studio Code.app/Contents/Info.plist\" 2>/dev/null",
+        "version_raw_output": "1.108.0"
+      }
+    },
+    {
+      "productName": "Slack",
+      "versionNumber": "4.47.72",
+      "architecture": "arm64",
+      "productFamily": "Collaboration",
+      "vendor": "Slack Technologies",
+      "evidence": {
+        "command_run": "mdfind \"kMDItemCFBundleIdentifier == 'com.tinyspeck.slackmacgap'\" | head -n 1",
+        "raw_output": "/Applications/Slack.app",
+        "version_command_run": "/usr/libexec/PlistBuddy -c \"Print :CFBundleShortVersionString\" \"/Applications/Slack.app/Contents/Info.plist\" 2>/dev/null",
+        "version_raw_output": "4.47.72"
+      }
+    },
+    {
+      "productName": "Google Chrome",
+      "versionNumber": "143.0.7499.193",
+      "architecture": "arm64",
+      "productFamily": "Browser",
+      "vendor": "Google",
+      "evidence": {
+        "command_run": "mdfind \"kMDItemCFBundleIdentifier == 'com.google.Chrome'\" | head -n 1",
+        "raw_output": "/Applications/Google Chrome.app",
+        "version_command_run": "/usr/libexec/PlistBuddy -c \"Print :CFBundleShortVersionString\" \"/Applications/Google Chrome.app/Contents/Info.plist\" 2>/dev/null",
+        "version_raw_output": "143.0.7499.193"
+      }
+    },
+    {
+      "productName": "Docker Desktop",
+      "versionNumber": "4.56.0",
+      "architecture": "arm64",
+      "productFamily": "Virtualization",
+      "vendor": "Docker, Inc.",
+      "evidence": {
+        "command_run": "mdfind \"kMDItemCFBundleIdentifier == 'com.docker.docker'\" | head -n 1",
+        "raw_output": "/Applications/Docker.app",
+        "version_command_run": "/usr/libexec/PlistBuddy -c \"Print :CFBundleShortVersionString\" \"/Applications/Docker.app/Contents/Info.plist\" 2>/dev/null",
+        "version_raw_output": "4.56.0"
+      }
+    },
+    {
+      "productName": "PyCharm",
+      "versionNumber": "2025.2.6",
+      "architecture": "arm64",
+      "productFamily": "IDE",
+      "vendor": "JetBrains",
+      "evidence": {
+        "command_run": "mdfind \"kMDItemCFBundleIdentifier == 'com.jetbrains.pycharm.ce'\" | head -n 1",
+        "raw_output": "/Applications/PyCharm CE.app",
+        "version_command_run": "/usr/libexec/PlistBuddy -c \"Print :CFBundleShortVersionString\" \"/Applications/PyCharm CE.app/Contents/Info.plist\" 2>/dev/null",
+        "version_raw_output": "2025.2.6"
+      }
+    }
+  ]
+}
